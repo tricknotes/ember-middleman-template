@@ -1,6 +1,10 @@
 language: ruby
 sudo: false
 cache: bundler
+install:
+  - gem install middleman --version=3 # Currently, only Middleman 3.x is supported.
+script:
+  - middleman init new_project --template="tricknotes/ember-middleman-template"
 rvm:
   - 2.0.0
   - 2.1
